@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "leetcode problems",
-  description: "A curated list of LeetCode problems with optimal TypeScript and Python solutions and interactive progress tracking.",
+  description: "A curated list of LeetCode problems with interactive progress tracking.",
 };
 
 export default function RootLayout({
