@@ -1,4 +1,4 @@
-# LeetCode Progress Tracker
+# leetcode-problems
 
 A clean, modern charcoal-themed progress tracker for standard DSA problem sets.
 
@@ -20,8 +20,8 @@ A clean, modern charcoal-themed progress tracker for standard DSA problem sets.
 To run this project locally, clone the workspace and install the dependencies:
 
 ```bash
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to view and use the tracker.
