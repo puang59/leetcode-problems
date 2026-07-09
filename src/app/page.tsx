@@ -485,10 +485,11 @@ export default function Home() {
               <div style={{
                 backgroundColor: "var(--bg-card)",
                 borderRadius: "8px",
-                overflow: "hidden",
+                overflowX: "auto",
                 border: "1px solid var(--border)",
+                WebkitOverflowScrolling: "touch"
               }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+                <table style={{ width: "100%", minWidth: "600px", borderCollapse: "collapse", textAlign: "left" }}>
                   <thead>
                     <tr style={{ borderBottom: "1px solid var(--border)", backgroundColor: "rgba(0,0,0,0.1)" }}>
                       <th style={{ padding: "12px 16px", width: "70px", textAlign: "center", fontSize: "13px", color: "var(--text-primary)", fontWeight: 600 }}>Status</th>
