@@ -13,10 +13,31 @@ export default function Home() {
   const [completedList, setCompletedList] = useState<string[]>([]);
   const [starredList, setStarredList] = useState<string[]>([]);
 
+  // Cookie helper functions
+  const getCookie = (name: string): string | null => {
+    if (typeof document === "undefined") return null;
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === " ") c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  };
+
+  const setCookie = (name: string, value: string, days = 365) => {
+    if (typeof document === "undefined") return;
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "; expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
+  };
+
   // Avoid hydration mismatch by waiting for client mount
   useEffect(() => {
-    const savedCompleted = localStorage.getItem("leetcode-completed");
-    const savedStarred = localStorage.getItem("leetcode-starred");
+    const savedCompleted = getCookie("leetcode-completed");
+    const savedStarred = getCookie("leetcode-starred");
     const timer = setTimeout(() => {
       if (savedCompleted) {
         try {
@@ -37,16 +58,16 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Save to localStorage when lists change
+  // Save to cookies when lists change
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem("leetcode-completed", JSON.stringify(completedList));
+      setCookie("leetcode-completed", JSON.stringify(completedList));
     }
   }, [completedList, mounted]);
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem("leetcode-starred", JSON.stringify(starredList));
+      setCookie("leetcode-starred", JSON.stringify(starredList));
     }
   }, [starredList, mounted]);
 
