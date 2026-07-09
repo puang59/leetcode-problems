@@ -228,7 +228,7 @@ export default function Home() {
             ?
           </span>
           <p style={{ color: "var(--text-secondary)", fontSize: "16px", lineHeight: "1.5", maxWidth: "450px" }}>
-            The LeetCode Study Guide is a popular list of algorithm practice problems. Mark your progress and master interview patterns.
+            This list is curated to focus on essential coding patterns rather than question memorization, aiming to build a strong problem-solving foundation for technical interviews.
           </p>
         </div>
 
