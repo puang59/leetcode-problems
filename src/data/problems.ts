@@ -122,7 +122,7 @@ export const PROBLEMS: Problem[] = [
   { id: "network-delay-time", name: "Network Delay Time", difficulty: "Medium", category: "Graphs", slug: "network-delay-time" },
 
   // --- Heap ---
-  { id: "kth-largest", name: "Kth Largest", difficulty: "Easy", category: "Heap", slug: "kth-largest-element-in-a-stream" },
+  { id: "kth-largest", name: "Kth Largest", difficulty: "Medium", category: "Heap", slug: "kth-largest-element-in-an-array" },
   { id: "top-k-frequent-heap", name: "Top K Frequent", difficulty: "Medium", category: "Heap", slug: "top-k-frequent-elements" },
   { id: "find-median-stream", name: "Find Median Stream", difficulty: "Hard", category: "Heap", slug: "find-median-from-data-stream" },
   { id: "k-closest-points", name: "K Closest Points", difficulty: "Medium", category: "Heap", slug: "k-closest-points-to-origin" },
