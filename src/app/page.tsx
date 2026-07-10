@@ -270,18 +270,94 @@ export default function Home() {
           >
             ?
           </span>
-          <p
+          <div
             style={{
-              color: "var(--text-secondary)",
-              fontSize: "16px",
-              lineHeight: "1.5",
-              maxWidth: "450px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "12px",
             }}
           >
-            This list is curated to focus on essential coding patterns rather
-            than question memorization, aiming to build a strong problem-solving
-            foundation for technical interviews.
-          </p>
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                fontSize: "16px",
+                lineHeight: "1.5",
+                maxWidth: "450px",
+              }}
+            >
+              This list is curated to focus on essential coding patterns rather
+              than question memorization, aiming to build a strong
+              problem-solving foundation for technical interviews. We will be
+              adding our solutions with detailed explanations soon.
+            </p>
+
+            {/*<button
+              style={{
+                color: "var(--text-secondary)",
+                fontSize: "16px",
+                lineHeight: "1.5",
+                maxWidth: "450px",
+              }}
+            >
+              Sync with GitHub
+            </button>*/}
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "8px",
+                alignItems: "flex-start",
+              }}
+            >
+              <button
+                disabled
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  padding: "10px 14px",
+                  borderRadius: "8px",
+                  border: "1px solid var(--border)",
+                  backgroundColor: "var(--bg-card)",
+                  color: "var(--text-muted)",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  cursor: "not-allowed",
+                  opacity: 0.7,
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  style={{
+                    color: "var(--text-primary)",
+                    flexShrink: 0,
+                  }}
+                >
+                  <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.19 1.18a11.1 11.1 0 0 1 5.8 0c2.22-1.49 3.18-1.18 3.18-1.18.64 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.42.36.79 1.08.79 2.19v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+                </svg>
+
+                <span>Sync with GitHub</span>
+
+                <span
+                  style={{
+                    marginLeft: "4px",
+                    padding: "2px 8px",
+                    borderRadius: "999px",
+                    fontSize: "11px",
+                    fontWeight: 600,
+                    background: "rgba(255,184,0,0.12)",
+                    color: "var(--color-medium)",
+                  }}
+                >
+                  Coming Soon
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Right Stats breakdown */}
@@ -707,14 +783,14 @@ export default function Home() {
                       <th
                         style={{
                           padding: "12px 16px",
-                          width: "100px",
+                          width: "auto",
                           textAlign: "center",
                           fontSize: "13px",
                           color: "var(--text-primary)",
                           fontWeight: 600,
                         }}
                       >
-                        Solution
+                        Our Solution
                       </th>
                     </tr>
                   </thead>
@@ -856,7 +932,7 @@ export default function Home() {
                           </td>
 
                           {/* Solution external link */}
-                          <td
+                          {/*<td
                             style={{
                               padding: "10px 16px",
                               textAlign: "center",
@@ -899,7 +975,7 @@ export default function Home() {
                                 <polyline points="10 9 9 9 8 9"></polyline>
                               </svg>
                             </a>
-                          </td>
+                          </td>*/}
                         </tr>
                       );
                     })}

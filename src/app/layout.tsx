@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "leetcode problems",
-  description: "A curated list of LeetCode problems with interactive progress tracking.",
+  description:
+    "A curated list of LeetCode problems with interactive progress tracking.",
 };
 
 export default function RootLayout({
@@ -25,6 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         {children}
         <Analytics />
