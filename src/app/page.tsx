@@ -628,7 +628,7 @@ export default function Home() {
             whiteSpace: "nowrap",
           }}
         >
-          All Topics
+          All Questions
           <span
             style={{
               fontSize: "11px",
