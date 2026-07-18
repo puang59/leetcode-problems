@@ -932,13 +932,13 @@ export default function Home() {
                           </td>
 
                           {/* Solution external link */}
-                          {/*<td
+                          <td
                             style={{
                               padding: "10px 16px",
                               textAlign: "center",
                             }}
                           >
-                            <a
+                            {/*<a
                               href={`https://leetcode.com/problems/${prob.slug}/solutions/`}
                               target="_blank"
                               rel="noopener noreferrer"
@@ -974,8 +974,8 @@ export default function Home() {
                                 <line x1="16" y1="17" x2="8" y2="17"></line>
                                 <polyline points="10 9 9 9 8 9"></polyline>
                               </svg>
-                            </a>
-                          </td>*/}
+                            </a>*/}
+                          </td>
                         </tr>
                       );
                     })}
