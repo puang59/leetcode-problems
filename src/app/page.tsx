@@ -725,6 +725,7 @@ export default function Home() {
                     width: "100%",
                     minWidth: "600px",
                     borderCollapse: "collapse",
+                    tableLayout: "fixed",
                     textAlign: "left",
                   }}
                 >
